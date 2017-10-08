@@ -20,7 +20,8 @@
             android:name=".Home_Navigation"
             android:label="@string/title_activity_home__navigation"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Create_Quiz"></activity>
+        <activity android:name=".Create_Quiz" />
+        <activity android:name=".Quiz_One"></activity>
     </application>
 
 </manifest>

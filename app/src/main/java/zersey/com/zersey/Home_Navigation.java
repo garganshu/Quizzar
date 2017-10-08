@@ -63,6 +63,16 @@ public class Home_Navigation extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
+
+    //quiz one redirection
+    public void Quiz_ONE(View view){
+        Toast.makeText(getApplicationContext(), "Quiz One Loading!!",
+                Toast.LENGTH_SHORT).show();
+        Intent i = new Intent(getApplicationContext(), Quiz_One.class);
+        startActivity(i);
+    }
+
+
     /*//closes fab submenu of quiz create
     private void closeSubMenusFab(){
         layoutFabCreate.setVisibility(View.INVISIBLE);
