@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/blurr1"
+    tools:context="zersey.com.zersey.LoginActivity">
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:text="EXISTING USER?"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_marginTop="5sp"
+        android:layout_margin="7dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:layout_height="wrap_content">
+            <EditText
+                android:inputType="textEmailAddress"
+                android:id="@+id/Login_email"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="EMAIL-ID"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            app:passwordToggleEnabled="true"
+            android:layout_height="wrap_content">
+            <EditText
+                android:inputType="textPassword"
+                android:id="@+id/Login_password"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="PASSWORD"/>
+        </android.support.design.widget.TextInputLayout>
+        <Button
+            android:background="@color/colorAccent"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_marginTop="25dp"
+            android:layout_width="250sp"
+            android:layout_height="wrap_content"
+            android:onClick="login"
+            android:text="LOGIN"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FORGOT PASSWORD?"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginBottom="10sp"
+            android:textColor="@color/colorAccent"
+            android:id="@+id/forgot"
+            android:layout_marginTop="15dp"
+            android:textSize="15sp"
+            android:onClick="forget"
+            android:clickable="true"/>
+
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:onClick="signed"
+        android:id="@+id/Login_notuser"
+        android:text="NOT A USER? SIGN UP NOW"
+        />
+</LinearLayout>
