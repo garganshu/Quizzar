@@ -21,15 +21,16 @@ public class Database_Adapter extends SQLiteOpenHelper {
     public static final String KEY_Opt3="topt3";
     public static final String KEY_Opt4="topt4";
     public static final String KEY_Solution="tsolution";
+    public static final String KEY_Type="ttype";
     private static String CREATE_TABLE_QUIZ = "CREATE TABLE "
-            + TABLE_Quiz + " (" + KEY_Ques + " TEXT," + KEY_Opt1 + " TEXT," + KEY_Opt2 + " TEXT," + KEY_Opt3 + " TEXT," + KEY_Opt4 + " TEXT," + KEY_Solution + " TEXT)";
+            + TABLE_Quiz + " (" + KEY_Ques + " TEXT," + KEY_Opt1 + " TEXT," + KEY_Opt2 + " TEXT," + KEY_Opt3 + " TEXT," + KEY_Opt4 + " TEXT," + KEY_Solution + " TEXT," + KEY_Type + " TEXT)";
 
     //initial quiz values in SQlite
-    private static String INITIAL_QUES1 = "INSERT INTO "+ TABLE_Quiz + " VALUES(' OS computer abbreviation usually means ?','Order of Significance','Open Software','Operating System','Optical Sensor','Operating System')";
-    private static String INITIAL_QUES2 = "INSERT INTO "+ TABLE_Quiz + " VALUES(' DB computer abbreviation usually means ?','Database','Double Byte','Data Block','Driver Boot','Database')";
-    private static String INITIAL_QUES3 = "INSERT INTO "+ TABLE_Quiz + " VALUES(' (Do no evil) is tag line of ?','Google','Microsoft','Apple','Intel','Google')";
-    private static String INITIAL_QUES4 = "INSERT INTO "+ TABLE_Quiz + " VALUES(' World first microprocessor is ?','Intel 4004','Intel 4006','Intel 4020','Intel 4008','Intel 4004')";
-    private static String INITIAL_QUES5 = "INSERT INTO "+ TABLE_Quiz + " VALUES(' Longhorn was the code name of ?','Windows Vista','Windows XP','Windows 7','Windows 10','Windows Vista')";
+    private static String INITIAL_QUES1 = "INSERT INTO "+ TABLE_Quiz + " VALUES(' OS computer abbreviation usually means ?','Order of Significance','Open Software','Operating System','Optical Sensor','Operating System','Quiz1')";
+    private static String INITIAL_QUES2 = "INSERT INTO "+ TABLE_Quiz + " VALUES(' DB computer abbreviation usually means ?','Database','Double Byte','Data Block','Driver Boot','Database','Quiz1')";
+    private static String INITIAL_QUES3 = "INSERT INTO "+ TABLE_Quiz + " VALUES(' (Do no evil) is tag line of ?','Google','Microsoft','Apple','Intel','Google','Quiz1')";
+    private static String INITIAL_QUES4 = "INSERT INTO "+ TABLE_Quiz + " VALUES(' World first microprocessor is ?','Intel 4004','Intel 4006','Intel 4020','Intel 4008','Intel 4004','Quiz1')";
+    private static String INITIAL_QUES5 = "INSERT INTO "+ TABLE_Quiz + " VALUES(' Longhorn was the code name of ?','Windows Vista','Windows XP','Windows 7','Windows 10','Windows Vista','Quiz1')";
 
     public Database_Adapter(Context context2) {
         super(context2, DATABASE_NAME, null, 1);

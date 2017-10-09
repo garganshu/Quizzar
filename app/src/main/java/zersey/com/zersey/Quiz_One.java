@@ -184,7 +184,7 @@ public class Quiz_One extends AppCompatActivity {
         sql_db= dbhelper.getWritableDatabase();
 
         mCursor2 = sql_db.rawQuery("SELECT * FROM "
-                + dbhelper.TABLE_Quiz, null);
+                + dbhelper.TABLE_Quiz + " WHERE " + dbhelper.KEY_Type + " = 'Quiz1'", null);
 
         //Log.d("check","cccc"+mCursor2);
 

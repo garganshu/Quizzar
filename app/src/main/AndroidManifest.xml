@@ -21,7 +21,8 @@
             android:label="@string/title_activity_home__navigation"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Create_Quiz" />
-        <activity android:name=".Quiz_One"></activity>
+        <activity android:name=".Quiz_One" />
+        <activity android:name=".Quiz_Two"></activity>
     </application>
 
 </manifest>

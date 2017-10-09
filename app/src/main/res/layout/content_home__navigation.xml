@@ -32,5 +32,23 @@
             />
     </android.support.v7.widget.CardView>
 
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:elevation="20dp"
+        android:onClick="Quiz_TWO"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        app:cardUseCompatPadding="true">
+        <TextView
+            android:id="@+id/quiz_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QUIZ TWO"
+            android:layout_gravity="center"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold"
+            />
+    </android.support.v7.widget.CardView>
+
 
 </LinearLayout>

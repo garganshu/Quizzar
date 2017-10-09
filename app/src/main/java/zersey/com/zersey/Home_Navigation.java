@@ -72,6 +72,13 @@ public class Home_Navigation extends AppCompatActivity
         startActivity(i);
     }
 
+    public void Quiz_TWO(View view){
+        Toast.makeText(getApplicationContext(), "Quiz Two Loading!!",
+                Toast.LENGTH_SHORT).show();
+        Intent i = new Intent(getApplicationContext(), Quiz_Two.class);
+        startActivity(i);
+    }
+
 
     /*//closes fab submenu of quiz create
     private void closeSubMenusFab(){
