@@ -34,8 +34,10 @@
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
+        android:id="@+id/CardView2"
         android:layout_height="50dp"
         android:elevation="20dp"
+        android:visibility="invisible"
         android:onClick="Quiz_TWO"
         app:cardBackgroundColor="@color/cardview_light_background"
         app:cardUseCompatPadding="true">
@@ -44,6 +46,66 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="QUIZ TWO"
+            android:layout_gravity="center"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold"
+            />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/CardView3"
+        android:layout_height="50dp"
+        android:elevation="20dp"
+        android:visibility="invisible"
+        android:onClick="Quiz_THREE"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        app:cardUseCompatPadding="true">
+        <TextView
+            android:id="@+id/quiz_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QUIZ THREE"
+            android:layout_gravity="center"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold"
+            />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/CardView4"
+        android:layout_height="50dp"
+        android:elevation="20dp"
+        android:visibility="invisible"
+        android:onClick="Quiz_FOUR"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        app:cardUseCompatPadding="true">
+        <TextView
+            android:id="@+id/quiz_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QUIZ FOUR"
+            android:layout_gravity="center"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold"
+            />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/CardView5"
+        android:layout_height="50dp"
+        android:elevation="20dp"
+        android:visibility="invisible"
+        android:onClick="Quiz_FIVE"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        app:cardUseCompatPadding="true">
+        <TextView
+            android:id="@+id/quiz_five"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QUIZ FIVE"
             android:layout_gravity="center"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textStyle="bold"

@@ -3,9 +3,12 @@ package zersey.com.zersey;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -23,6 +26,8 @@ public class Home_Navigation extends AppCompatActivity
 
     boolean fabExpanded = false;
     LinearLayout layoutFabCreate;
+
+    static int quiz_count = 1;
 
 
     @Override
@@ -62,6 +67,33 @@ public class Home_Navigation extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        CardView cardView2 = (CardView) findViewById(R.id.CardView2);
+        CardView cardView3 = (CardView) findViewById(R.id.CardView3);
+        CardView cardView4 = (CardView) findViewById(R.id.CardView4);
+        CardView cardView5 = (CardView) findViewById(R.id.CardView5);
+
+        get_count();
+        if(quiz_count == 2){
+            cardView2.setVisibility(View.VISIBLE);
+            put_count();
+        }else if(quiz_count == 3){
+            cardView2.setVisibility(View.VISIBLE);
+            cardView3.setVisibility(View.VISIBLE);
+            put_count();
+        }else if(quiz_count == 4){
+            cardView2.setVisibility(View.VISIBLE);
+            cardView3.setVisibility(View.VISIBLE);
+            cardView4.setVisibility(View.VISIBLE);
+            put_count();
+        }else if(quiz_count == 5){
+            cardView2.setVisibility(View.VISIBLE);
+            cardView3.setVisibility(View.VISIBLE);
+            cardView4.setVisibility(View.VISIBLE);
+            cardView5.setVisibility(View.VISIBLE);
+            put_count();
+        }
+
     }
 
     //quiz one redirection
@@ -72,10 +104,31 @@ public class Home_Navigation extends AppCompatActivity
         startActivity(i);
     }
 
+    public void Quiz_THREE(View view){
+        Toast.makeText(getApplicationContext(), "Quiz Three Loading!!",
+                Toast.LENGTH_SHORT).show();
+        Intent i = new Intent(getApplicationContext(), Quiz_Three.class);
+        startActivity(i);
+    }
+
     public void Quiz_TWO(View view){
         Toast.makeText(getApplicationContext(), "Quiz Two Loading!!",
                 Toast.LENGTH_SHORT).show();
         Intent i = new Intent(getApplicationContext(), Quiz_Two.class);
+        startActivity(i);
+    }
+
+    public void Quiz_FOUR(View view){
+        Toast.makeText(getApplicationContext(), "Quiz Four Loading!!",
+                Toast.LENGTH_SHORT).show();
+        Intent i = new Intent(getApplicationContext(), Quiz_Four.class);
+        startActivity(i);
+    }
+
+    public void Quiz_FIVE(View view){
+        Toast.makeText(getApplicationContext(), "Quiz Five Loading!!",
+                Toast.LENGTH_SHORT).show();
+        Intent i = new Intent(getApplicationContext(), Quiz_Five.class);
         startActivity(i);
     }
 
@@ -111,6 +164,8 @@ public class Home_Navigation extends AppCompatActivity
             super.onBackPressed();
         }
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -158,4 +213,24 @@ public class Home_Navigation extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public void get_count(){
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("CountState", MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+
+        quiz_count=pref.getInt("count",1);
+
+        Log.d("checkvaluegetcount :",""+quiz_count);
+
+
+    }
+    public void put_count(){
+        SharedPreferences sp = getApplicationContext().getSharedPreferences("CountState", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putInt("count", quiz_count);
+        editor.commit();
+
+        Log.d("checkvalueputcount :",""+quiz_count);
+    }
+
 }

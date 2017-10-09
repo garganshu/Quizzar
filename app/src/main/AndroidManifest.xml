@@ -22,7 +22,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Create_Quiz" />
         <activity android:name=".Quiz_One" />
-        <activity android:name=".Quiz_Two"></activity>
+        <activity android:name=".Quiz_Two" />
+        <activity android:name=".Quiz_Three" />
+        <activity android:name=".Quiz_Four" />
+        <activity android:name=".Quiz_Five"></activity>
     </application>
 
 </manifest>

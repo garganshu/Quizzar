@@ -2,10 +2,14 @@ package zersey.com.zersey;
 
 import android.app.AlertDialog;
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -25,7 +29,7 @@ public class Create_Quiz extends AppCompatActivity {
     AlertDialog.Builder builder;
     Database_Adapter dbhelper;
     SQLiteDatabase sql_db;
-    static int count = 2;
+    static int count;
 
 
     @Override
@@ -56,6 +60,12 @@ public class Create_Quiz extends AppCompatActivity {
         eq1sol = (EditText) findViewById(R.id.Quiz2_q1sol);
         eq2sol = (EditText) findViewById(R.id.Quiz2_q2sol);
         eq3sol = (EditText) findViewById(R.id.Quiz2_q3sol);
+
+        if(count>1){
+            get_count();
+        }else{
+            count = 1;
+        }
 
 
 
@@ -116,8 +126,10 @@ public class Create_Quiz extends AppCompatActivity {
         if (isEmptyField(eq3sol)) return;
 
         //db connectivity-
-
+        count++;
         DBValues(sq1,sq1o1,sq1o2,sq1o3,sq1o4,sq1sol,"Quiz"+count);
+        DBValues(sq2,sq2o1,sq2o2,sq2o3,sq2o4,sq2sol,"Quiz"+count);
+        DBValues(sq3,sq3o1,sq3o2,sq3o3,sq3o4,sq3sol,"Quiz"+count);
 
 
 
@@ -125,10 +137,14 @@ public class Create_Quiz extends AppCompatActivity {
                 .setCancelable(false)
                 .setPositiveButton("Okay", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        finish();
+                        Intent i = new Intent(getApplicationContext(), Home_Navigation.class);
+                        startActivity(i);
+
                     }
                 });
 
+        put_count();
+        Log.d("check count"," :"+count);
         //Creating dialog box
         AlertDialog alert = builder.create();
         //Setting the title manually
@@ -163,12 +179,29 @@ public class Create_Quiz extends AppCompatActivity {
 
 
         sql_db.insert(dbhelper.TABLE_Quiz, "1", value);
-        count++;
+
         Toast.makeText(getApplicationContext(), "Store Successfull ",
                 Toast.LENGTH_LONG).show();
 
     }
 
+    public void put_count(){
+        SharedPreferences sp = getApplicationContext().getSharedPreferences("CountState", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putInt("count", count);
+        editor.commit();
+    }
+
+    public void get_count(){
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("CountState", MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+
+        count=pref.getInt("count",1);
+
+        Log.d("check count at create :",""+count);
+
+
+    }
 
 
 }

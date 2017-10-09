@@ -5,7 +5,7 @@
     android:id="@+id/activity_quiz__one"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="zersey.com.zersey.Quiz_Two"
+    tools:context="zersey.com.zersey.Quiz_Five"
     android:layout_margin="10sp"
     android:orientation="vertical">
 
@@ -32,7 +32,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
                     <TextView
-                        android:id="@+id/Quiz2_ques1"
+                        android:id="@+id/Quiz5_ques1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Ques one"
@@ -42,7 +42,7 @@
                     <RadioGroup
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/RGQ2_q1">
+                        android:id="@+id/RGQ5_q1">
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -76,7 +76,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
                     <TextView
-                        android:id="@+id/Quiz2_ques2"
+                        android:id="@+id/Quiz5_ques2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Ques two"
@@ -86,7 +86,7 @@
                     <RadioGroup
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/RGQ2_q2">
+                        android:id="@+id/RGQ5_q2">
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -120,7 +120,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
                     <TextView
-                        android:id="@+id/Quiz2_ques3"
+                        android:id="@+id/Quiz5_ques3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Ques three"
@@ -130,7 +130,7 @@
                     <RadioGroup
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/RGQ2_q3">
+                        android:id="@+id/RGQ5_q3">
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -156,7 +156,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="SUBMIT"
-                android:onClick="submit_quiz_two"
+                android:onClick="submit_quiz_five"
                 android:background="@color/black"
                 android:textColor="@color/white"
                 android:layout_gravity="center"/>
