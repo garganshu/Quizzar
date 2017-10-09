@@ -5,9 +5,9 @@
     android:id="@+id/activity_create__quiz"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10sp"
     android:orientation="vertical"
-    tools:context="zersey.com.zersey.Create_Quiz">
+    tools:context="zersey.com.zersey.Create_Quiz"
+    android:background="@drawable/blurr1">
 
 
     <android.support.v4.widget.NestedScrollView
@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="20dp"
-        android:layout_marginBottom="10dp"
+        android:layout_margin="7dp"
         app:cardBackgroundColor="@color/cardview_light_background"
         app:cardUseCompatPadding="true">
         <LinearLayout
@@ -87,7 +87,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="20dp"
-        android:layout_marginBottom="10dp"
+        android:layout_margin="7dp"
         app:cardBackgroundColor="@color/cardview_light_background"
         app:cardUseCompatPadding="true">
         <LinearLayout
@@ -149,7 +149,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="20dp"
-        android:layout_marginBottom="10dp"
+        android:layout_margin="7dp"
         app:cardBackgroundColor="@color/cardview_light_background"
         app:cardUseCompatPadding="true">
         <LinearLayout

@@ -36,6 +36,7 @@ public class Create_Quiz extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create__quiz);
+        setTitle("CREATE QUIZ");
         builder = new AlertDialog.Builder(this);
 
         eq1 = (EditText) findViewById(R.id.Quiz2_ques1);

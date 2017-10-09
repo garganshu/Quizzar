@@ -24,10 +24,12 @@ import android.widget.Toast;
 public class Home_Navigation extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    //Not working-code
     boolean fabExpanded = false;
     LinearLayout layoutFabCreate;
 
     static int quiz_count = 1;
+    int backpress = 0;
 
 
     @Override
@@ -161,7 +163,14 @@ public class Home_Navigation extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            backpress++;
+            if(backpress==1) {
+                Toast.makeText(getApplicationContext(), " Press Back again to Exit ", Toast.LENGTH_SHORT).show();
+            }else if (backpress>1) {
+                moveTaskToBack(true);
+                android.os.Process.killProcess(android.os.Process.myPid());
+                System.exit(1);
+            }
         }
     }
 
@@ -183,6 +192,8 @@ public class Home_Navigation extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Toast.makeText(getApplicationContext(), "Coming Soon",
+                    Toast.LENGTH_SHORT).show();
             return true;
         }
 
@@ -196,17 +207,19 @@ public class Home_Navigation extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+            Toast.makeText(getApplicationContext(), "Coming Soon",
+                    Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_gallery) {
+            Toast.makeText(getApplicationContext(), "Coming Soon",
+                    Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_slideshow) {
+            Toast.makeText(getApplicationContext(), "Coming Soon",
+                    Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+            Toast.makeText(getApplicationContext(), "Coming Soon",
+                    Toast.LENGTH_SHORT).show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

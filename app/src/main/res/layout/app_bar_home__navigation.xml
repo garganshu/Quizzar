@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="zersey.com.zersey.Home_Navigation">
+    tools:context="zersey.com.zersey.Home_Navigation"
+    android:background="@drawable/blurr1">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
